@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff5c35" />
+    <title>Food that runs | 街を走る、できたてごはん</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Food that runs ホーム">
+          <span class="brand-mark">F</span>
+          <span>Food that <em>runs</em></span>
+        </a>
+        <div class="delivery-address"><span class="pin">⌖</span><span>東京都 走町 2-14-6</span><span class="chevron">⌄</span></div>
+        <div class="top-actions">
+          <button class="icon-btn" aria-label="検索">⌕</button>
+          <button class="avatar" aria-label="プロフィール">Y</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <p class="eyebrow">RUNNING THE CITY</p>
+            <h1>街を走る、<br /><span>できたてごはん。</span></h1>
+            <p class="hero-copy">お気に入りの味が、あなたの街を駆け抜けてやってくる。</p>
+          </div>
+          <div class="hero-stat"><strong>50</strong><span>shops<br />nearby</span></div>
+        </section>
+
+        <nav class="categories" aria-label="店舗ジャンル">
+          <button class="category active" data-category="すべて"><span>✦</span>すべて</button>
+          <button class="category" data-category="和食"><span>◉</span>和食</button>
+          <button class="category" data-category="洋食"><span>◒</span>洋食</button>
+          <button class="category" data-category="アジア料理"><span>◌</span>アジア料理</button>
+          <button class="category" data-category="カフェ"><span>☕</span>カフェ</button>
+          <button class="category" data-category="中華"><span>✺</span>中華</button>
+          <button class="category" data-category="ヘルシー"><span>♧</span>ヘルシー</button>
+          <button class="category" data-category="スイーツ"><span>♢</span>スイーツ</button>
+          <button class="category" data-category="ファストフード"><span>⚡</span>ファストフード</button>
+          <button class="category" data-category="居酒屋"><span>♨</span>居酒屋</button>
+          <button class="category" data-category="パン"><span>⌁</span>パン</button>
+        </nav>
+
+        <section class="explore-layout">
+          <div class="map-panel">
+            <div class="map-toolbar">
+              <div><p class="section-kicker">EXPLORE THE CITY</p><h2>走町エリア</h2></div>
+              <button class="location-btn">⌖ 現在地</button>
+            </div>
+            <div class="city-map" id="city-map" aria-label="走町の店舗マップ">
+              <div class="river"></div>
+              <div class="district-label label-a">中央通り</div>
+              <div class="district-label label-b">緑ヶ丘</div>
+              <div class="district-label label-c">川沿い</div>
+              <div class="district-label label-d">駅前</div>
+              <div class="road road-1"></div><div class="road road-2"></div><div class="road road-3"></div>
+              <div class="road road-4"></div><div class="road road-5"></div><div class="road road-6"></div>
+              <div class="park park-a">走町公園</div><div class="park park-b">ひだまり広場</div>
+              <div class="map-buildings" aria-hidden="true"></div>
+              <div id="map-markers"></div>
+              <div class="map-you"><span></span><b>あなた</b></div>
+              <div class="map-zoom"><button>＋</button><button>−</button></div>
+            </div>
+            <div class="map-footer"><span class="live-dot"></span><span>現在地から近い順に表示中</span><span class="map-scale">500m</span></div>
+          </div>
+          <div class="restaurant-panel">
+            <div class="list-heading"><div><p class="section-kicker">GOOD FOOD, GOOD MOOD</p><h2>近くのお店</h2></div><span id="result-count">50店舗</span></div>
+            <div id="restaurant-list" class="restaurant-list"></div>
+          </div>
+        </section>
+      </main>
+      <div id="modal-root"></div>
+      <div id="toast" class="toast" role="status"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
